@@ -21,7 +21,7 @@ window.__ModuleLoader__.load({
 
         // The hero headline ("Into the Unknown" + "Preview") is a locale string, not a slot, and dsh refuses
         // a second dictionary for the same namespace, so it is hidden by CSS; the mark's hitbox goes with it.
-        const HIDE_HERO = '[class$="_titleGroup"], [class$="_fishHitbox"] { display: none; }'
+        const HIDE_HERO = '[class$="_titleGroup"], [class$="_fishHitbox"], [class$="_heroWorkspaceRow"] { display: none; }'
 
         function Nothing() {
             return null
@@ -44,7 +44,6 @@ window.__ModuleLoader__.load({
             ctx.slots.inject('sidebar.brand.mark', () => ctx.slots.register({ name: 'sidebar.brand.mark' }, Mark))
             ctx.slots.inject('sidebar.brand.name', () => ctx.slots.register({ name: 'sidebar.brand.name' }, Name))
             ctx.slots.inject('conversation.hero.brand.mark', () => ctx.slots.register({ name: 'conversation.hero.brand.mark' }, Nothing))
-            ctx.slots.inject('conversation.hero.workspace', () => ctx.slots.register({ name: 'conversation.hero.workspace' }, Nothing))
         }
 
         return { apply, inject }

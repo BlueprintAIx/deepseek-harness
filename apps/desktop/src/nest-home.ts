@@ -11,6 +11,5 @@ if (existsSync(shipped)) {
   const plugins = join(home, 'profiles', 'desktop', 'node_modules')
   mkdirSync(plugins, { recursive: true })
   cpSync(join(shipped, 'nest-brand'), join(plugins, 'nest-brand'), { recursive: true })
-  const patch = join(home, 'cordis.patch.yml')
-  if (!existsSync(patch)) copyFileSync(join(shipped, 'cordis.patch.yml'), patch)
+  copyFileSync(join(shipped, 'cordis.patch.yml'), join(home, 'cordis.patch.yml'))
 }

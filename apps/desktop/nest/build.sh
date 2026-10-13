@@ -9,7 +9,7 @@ app=$out/Nest.app
 cd "$desktop/../.."
 pnpm install --frozen-lockfile
 
-export DSH_DESKTOP_UNSIGNED=1 DSH_DESKTOP_APP_ID=io.otus.nest CSC_IDENTITY_AUTO_DISCOVERY=false
+export DSH_DESKTOP_UNSIGNED=1 DSH_DESKTOP_APP_ID=com.corefoil.nest CSC_IDENTITY_AUTO_DISCOVERY=false
 export DSH_DESKTOP_TARGET_PLATFORM=darwin DSH_DESKTOP_TARGET_ARCH=arm64
 pnpm --dir "$desktop" run package:mac:arm64 -- --prepare-only --unsigned
 pnpm --dir "$desktop" exec electron-builder --config nest.electron-builder.config.mjs --mac --arm64 --dir --publish never
