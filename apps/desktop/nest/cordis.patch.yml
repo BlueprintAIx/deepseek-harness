@@ -27,3 +27,12 @@
 - id: ui-cordis
   name: '@deepseek-ai/dsh-client-ui-cordis'
   disabled: true
+- id: ui-settings-plugins
+  name: '@deepseek-ai/dsh-client-ui-settings-plugins'
+  disabled: true
+- id: ui-plugin-manager
+  name: '@deepseek-ai/dsh-client-ui-plugin-manager'
+  disabled: true
+- id: ui-settings-plugin-inventory
+  name: '@deepseek-ai/dsh-client-ui-settings-plugin-inventory'
+  disabled: true
