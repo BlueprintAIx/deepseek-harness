@@ -1,0 +1,20 @@
+- id: llm-pi-ai
+  name: '@deepseek-ai/dsh-llm-pi-ai'
+  config:
+    providers:
+      openrouter:
+        apiKeyEnv: NEST_KEY
+        baseURL: https://nest-litellm.fly.dev
+- id: agent-default-model
+  name: '@deepseek-ai/dsh-agent-default-model'
+  config:
+    provider: openrouter
+    model: anthropic/claude-opus-5.5
+- id: ui-brand-official
+  name: '@deepseek-ai/dsh-client-ui-brand-official'
+  disabled: true
+- insert:
+    - id: nest-brand
+      name: nest-brand
+      config:
+        name: Nest

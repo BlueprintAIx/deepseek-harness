@@ -22,6 +22,7 @@ export default {
   // productName inside the packaged package.json is what Electron names the app after: it decides the
   // user-data folder and single-instance lock, which must not collide with an installed DeepSeek Harness.
   extraMetadata: { ...extraMetadata, productName: 'Nest' },
+  extraResources: [...upstream.extraResources, { from: 'nest', to: 'nest', filter: ['cordis.patch.yml', 'nest-brand/**'] }],
   mac: { ...upstream.mac, identity: null, forceCodeSigning: false, hardenedRuntime: false, notarize: false, target: ['zip'] },
   dmg: { ...upstream.dmg, sign: false },
   publish: null,
